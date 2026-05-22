@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Songs That Remind Us of Karsyn Sophia Salvador</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background-color: #f9f3eb;
+  font-family: 'Lora', Georgia, serif;
+  color: #3d2b1f;
+  min-height: 100vh;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.13;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 180px;
+}
+
+.rose-strip { width:100%; height:210px; position:relative; overflow:hidden; background:#ddd0be; }
+.rose-strip svg { width:100%; height:100%; display:block; }
+.rose-fade { position:absolute; inset:0; background:linear-gradient(to bottom,rgba(249,243,235,0) 20%,#f9f3eb 100%); }
+
+.page { position:relative; z-index:1; max-width:700px; margin:0 auto; padding:0 1.5rem 5rem; }
+
+.header { text-align:center; padding:2rem 0 2.5rem; }
+.eyebrow { font-size:11px; letter-spacing:0.26em; text-transform:uppercase; color:#b07a5a; margin-bottom:1rem; }
+.header h1 { font-family:'Playfair Display',serif; font-size:clamp(1.5rem,4vw,2rem); font-weight:400; color:#2e1b0e; line-height:1.2; margin-bottom:0.3rem; }
+.sister-name { font-family:'Playfair Display',serif; font-size:clamp(2rem,6vw,3.2rem); font-weight:600; font-style:italic; color:#2e1b0e; line-height:1.1; margin-bottom:1rem; }
+.header p { font-size:0.92rem; color:#7a5c47; font-style:italic; line-height:1.8; max-width:420px; margin:0 auto; }
+.sep { text-align:center; color:#d4a982; letter-spacing:12px; margin:2rem 0; font-size:16px; }
+
+.songs-list { display:flex; flex-direction:column; gap:2rem; }
+
+/* ── SONG CARD ── */
+.song-card {
+  background: #fffaf4;
+  border: 1px solid #e8d5c0;
+  border-radius: 20px;
+  overflow: hidden;
+  animation: fadeUp 0.55s ease both;
+}
+@keyframes fadeUp { from{opacity:0;transform:translateY(16px)} to{opacity:1;transform:translateY(0)} }
+
+/* ── PLAYER STAGE ── */
+.player-stage {
+  background: #2a1a0e;
+  padding: 2rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  min-height: 260px;
+}
+
+/* wood grain lines */
+.player-stage::before {
+  content:'';
+  position:absolute;
+  inset:0;
+  background: repeating-linear-gradient(
+    92deg,
+    transparent,
+    transparent 18px,
+    rgba(255,255,255,0.025) 18px,
+    rgba(255,255,255,0.025) 19px
+  );
+  pointer-events:none;
+}
+
+.player-stage::after {
+  content:'';
+  position:absolute;
+  inset:0;
+  background: repeating-linear-gradient(
+    180deg,
+    transparent,
+    transparent 40px,
+    rgba(0,0,0,0.08) 40px,
+    rgba(0,0,0,0.08) 41px
+  );
+  pointer-events:none;
+}
+
+/* ── TURNTABLE PLATTER ── */
+.turntable {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin-bottom: 1rem;
+  z-index: 2;
+}
+
+/* platter base */
+.platter {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: #1a0f08;
+  position: absolute;
+  top: 0; left: 0;
+  box-shadow: 0 0 0 6px #2e1e10, 0 0 0 8px #1a0f08, 0 6px 24px rgba(0,0,0,0.6);
+}
+
+/* vinyl record */
+.record {
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  position: absolute;
+  top: 5px; left: 5px;
+  background: radial-gradient(circle,
+    #1a1a1a 0%,
+    #1a1a1a 8%,
+    #111 8.5%,
+    #222 9%,
+    #111 10%,
+    #222 11%,
+    #111 13%,
+    #1e1e1e 14%,
+    #111 16%,
+    #1e1e1e 17%,
+    #111 20%,
+    #222 21%,
+    #111 24%,
+    #1e1e1e 25%,
+    #111 29%,
+    #222 30%,
+    #111 34%,
+    #1e1e1e 35%,
+    #111 40%,
+    #222 41%,
+    #111 46%,
+    #1e1e1e 47%,
+    #111 52%,
+    #222 53%,
+    #111 58%,
+    #1e1e1e 59%,
+    #111 65%,
+    #222 66%,
+    #111 72%,
+    #1e1e1e 73%,
+    #111 80%,
+    #1e1e1e 81%,
+    #111 89%,
+    #1e1e1e 90%,
+    #111 100%
+  );
+  transform-origin: center;
+  transition: filter 0.3s;
+}
+
+.record.spinning {
+  animation: spinRecord 3s linear infinite;
+}
+
+@keyframes spinRecord {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* label in center of record */
+.record-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 64px;
+  height: 64px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(circle, #d4a982 0%, #b07a5a 60%, #8c5e3c 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+.record-label-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 7px;
+  font-style: italic;
+  color: #fffaf4;
+  text-align: center;
+  line-height: 1.3;
+  padding: 0 4px;
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+/* spindle hole */
+.spindle {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 8px; height: 8px;
+  transform: translate(-50%,-50%);
+  border-radius: 50%;
+  background: #1a1a1a;
+  z-index: 2;
+  box-shadow: 0 0 0 1.5px #333;
+}
+
+/* ── TONEARM ── */
+.tonearm-wrap {
+  position: absolute;
+  top: 10px;
+  right: 18px;
+  width: 80px;
+  height: 160px;
+  z-index: 10;
+  transform-origin: 72px 18px;
+  transition: transform 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tonearm-wrap.resting {
+  transform: rotate(-28deg);
+}
+
+.tonearm-wrap.playing {
+  transform: rotate(0deg);
+}
+
+/* pivot base */
+.arm-pivot {
+  position: absolute;
+  top: 8px; right: 0;
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #d4a982 30%, #8c5e3c 100%);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+  z-index: 2;
+}
+
+/* arm shaft */
+.arm-shaft {
+  position: absolute;
+  top: 19px;
+  right: 10px;
+  width: 3px;
+  height: 130px;
+  background: linear-gradient(to bottom, #c9a06a, #8c5e3c, #6b4426);
+  border-radius: 2px;
+  transform-origin: top center;
+  transform: rotate(-8deg);
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+}
+
+/* headshell at end of arm */
+.arm-head {
+  position: absolute;
+  bottom: 0;
+  right: 2px;
+  width: 14px;
+  height: 22px;
+  background: linear-gradient(to bottom, #a07040, #5c3a1e);
+  border-radius: 3px 3px 6px 6px;
+  box-shadow: 1px 2px 5px rgba(0,0,0,0.5);
+}
+
+/* ── CONTROLS BAR ── */
+.controls-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 3;
+  margin-top: 0.5rem;
+}
+
+.play-vinyl-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid #b07a5a;
+  background: rgba(176,122,90,0.15);
+  color: #d4a982;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, transform 0.15s;
+  backdrop-filter: blur(4px);
+}
+
+.play-vinyl-btn:hover { background: rgba(176,122,90,0.3); transform: scale(1.07); }
+.play-vinyl-btn:active { transform: scale(0.96); }
+
+.song-info-stage {
+  text-align: center;
+  flex: 1;
+}
+
+.stage-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.95rem;
+  font-style: italic;
+  color: #f0e6d8;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.stage-artist {
+  font-size: 0.72rem;
+  color: #a08060;
+  letter-spacing: 0.06em;
+}
+
+.spotify-open-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 11px;
+  border-radius: 20px;
+  background: #1DB954;
+  color: #fff;
+  font-size: 10px;
+  font-family: 'Lora', serif;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+.spotify-open-btn:hover { background: #17a349; }
+.spotify-open-btn svg { width: 11px; height: 11px; fill: #fff; flex-shrink: 0; }
+
+/* ── EMBED (hidden under stage, revealed on play) ── */
+.embed-reveal {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.6s ease;
+  background: #2a1a0e;
+  padding: 0 1.5rem;
+}
+.embed-reveal.open {
+  max-height: 120px;
+  padding-bottom: 1rem;
+}
+.embed-reveal iframe {
+  width: 100%;
+  height: 80px;
+  border: none;
+  border-radius: 10px;
+  display: block;
+}
+
+/* ── CARD BOTTOM ── */
+.card-bottom {
+  padding: 1.25rem 1.5rem;
+}
+
+.card-meta-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.card-from-badge {
+  background: #fdf0e4;
+  border: 1px solid #e8d5c0;
+  border-radius: 20px;
+  padding: 3px 10px;
+  font-size: 0.72rem;
+  color: #b07a5a;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.card-message {
+  background: #fdf6ee;
+  border-left: 3px solid #d4a982;
+  padding: 0.9rem 1rem;
+  font-style: italic;
+  font-size: 0.88rem;
+  color: #5c3d2a;
+  line-height: 1.75;
+}
+.card-message .msg-from {
+  display: block;
+  font-size: 0.72rem;
+  font-style: normal;
+  color: #b07a5a;
+  margin-top: 0.45rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+/* ── ADD SONG FORM ── */
+.add-section {
+  margin-top: 2.5rem;
+  background: #fffaf4;
+  border: 1px dashed #d4a982;
+  border-radius: 16px;
+  padding: 1.75rem;
+}
+.add-title { font-family:'Playfair Display',serif; font-size:1.1rem; font-style:italic; color:#2e1b0e; margin-bottom:0.3rem; }
+.add-subtitle { font-size:0.82rem; color:#9a7060; font-style:italic; margin-bottom:1.25rem; line-height:1.6; }
+.form-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:12px; }
+@media (max-width:520px) { .form-grid { grid-template-columns:1fr; } }
+.field { display:flex; flex-direction:column; gap:5px; }
+.field.full { grid-column:1/-1; }
+.field label { font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:#b07a5a; }
+.field input,.field textarea {
+  background:#f9f3eb; border:1px solid #e8d5c0; border-radius:8px;
+  padding:9px 12px; font-family:'Lora',serif; font-size:0.88rem;
+  color:#3d2b1f; outline:none; transition:border-color 0.2s; resize:none; width:100%;
+}
+.field input:focus,.field textarea:focus { border-color:#b07a5a; }
+.field input::placeholder,.field textarea::placeholder { color:#c4a98a; }
+.submit-btn {
+  width:100%; padding:11px; background:#b07a5a; color:#fffaf4;
+  border:none; border-radius:10px; font-family:'Playfair Display',serif;
+  font-size:0.95rem; font-style:italic; cursor:pointer;
+  transition:background 0.2s,transform 0.1s; margin-top:4px;
+}
+.submit-btn:hover { background:#96644a; }
+.submit-btn:active { transform:scale(0.99); }
+.success-msg { display:none; text-align:center; padding:1rem; font-style:italic; color:#7a5c47; font-size:0.9rem; line-height:1.7; }
+
+.hosting-note {
+  background:#fdf0e4; border:1px solid #e8d5c0; border-radius:10px;
+  padding:0.85rem 1rem; font-size:0.78rem; color:#9a7060; font-style:italic;
+  margin-top:1.25rem; line-height:1.7; text-align:center;
+}
+
+.footer { text-align:center; margin-top:3.5rem; padding-top:2rem; border-top:1px solid #e8d5c0; }
+.footer p { font-family:'Playfair Display',serif; font-style:italic; font-size:1.05rem; color:#9a7060; line-height:1.9; }
+.footer .signed { font-family:'Lora',serif; font-size:0.8rem; font-style:normal; color:#b07a5a; letter-spacing:0.08em; margin-top:0.4rem; display:block; }
+
+/* ── EMBED ── */
+.embed-reveal { max-height:0; overflow:hidden; transition:max-height 0.6s ease, padding 0.6s ease, opacity 0.4s ease; background:#2a1a0e; padding:0 1.5rem; opacity:0; pointer-events:none; }
+.embed-reveal.open { max-height:110px; padding:0.75rem 1.5rem 1rem; opacity:1; pointer-events:auto; }
+.embed-reveal iframe { width:100%; height:80px; border:none; border-radius:10px; display:block; }
+
+/* ── CORK BOARD SECTION ── */
+.corkboard-section { margin-top:3rem; }
+.corkboard-section-title { font-family:'Playfair Display',serif; font-size:1.1rem; font-style:italic; color:#2e1b0e; margin-bottom:0.3rem; }
+.corkboard-section-subtitle { font-size:0.82rem; color:#9a7060; font-style:italic; margin-bottom:1.25rem; line-height:1.6; }
+.corkboard { background: repeating-linear-gradient(0deg,transparent,transparent 28px,rgba(0,0,0,0.03) 28px,rgba(0,0,0,0.03) 29px), repeating-linear-gradient(90deg,transparent,transparent 28px,rgba(0,0,0,0.03) 28px,rgba(0,0,0,0.03) 29px), linear-gradient(135deg,#c9a96e 0%,#b8935a 30%,#c4a068 60%,#b08040 100%); border-radius:16px; padding:1.5rem; min-height:200px; position:relative; box-shadow:inset 0 2px 8px rgba(0,0,0,0.25),0 4px 20px rgba(80,40,10,0.3); border:6px solid #8c5e2a; outline:2px solid #6b4420; }
+.corkboard::before { content:''; position:absolute; inset:0; border-radius:10px; background-image:radial-gradient(circle,rgba(160,100,40,0.18) 1px,transparent 1px),radial-gradient(circle,rgba(200,150,80,0.12) 1.5px,transparent 1.5px); background-size:12px 12px,22px 22px; background-position:0 0,6px 6px; pointer-events:none; }
+.corkboard-photos { display:flex; flex-wrap:wrap; gap:1rem; position:relative; z-index:1; min-height:80px; }
+.corkboard-empty { width:100%; text-align:center; padding:2rem; font-style:italic; color:rgba(80,40,10,0.5); font-size:0.88rem; font-family:'Lora',serif; }
+.pinned-photo { position:relative; flex-shrink:0; animation:pinDrop 0.4s cubic-bezier(0.34,1.56,0.64,1) both; }
+@keyframes pinDrop { from{opacity:0;transform:translateY(-20px) rotate(var(--tilt))} to{opacity:1;transform:translateY(0) rotate(var(--tilt))} }
+.pinned-photo:hover { z-index:10; transform:rotate(0deg) scale(1.06) !important; transition:transform 0.2s ease; }
+.pin { position:absolute; top:-10px; left:50%; transform:translateX(-50%); width:16px; height:16px; z-index:2; }
+.pin-head { width:14px; height:14px; border-radius:50%; margin:0 auto; box-shadow:0 2px 4px rgba(0,0,0,0.4),inset 0 1px 2px rgba(255,255,255,0.4); }
+.pin-needle { width:2px; height:8px; background:linear-gradient(to bottom,#888,#555); margin:0 auto; border-radius:0 0 1px 1px; }
+.photo-frame { background:#fff; padding:6px 6px 28px; box-shadow:2px 3px 10px rgba(0,0,0,0.25); position:relative; }
+.photo-frame img { display:block; width:130px; height:130px; object-fit:cover; }
+.photo-caption { position:absolute; bottom:4px; left:0; right:0; text-align:center; font-family:'Lora',serif; font-style:italic; font-size:9px; color:#7a5c47; padding:0 4px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.upload-area { margin-top:1rem; background:#fffaf4; border:1px dashed #d4a982; border-radius:16px; padding:1.5rem; }
+.upload-drop-zone { border:2px dashed #d4a982; border-radius:12px; padding:1.5rem; text-align:center; cursor:pointer; transition:background 0.2s,border-color 0.2s; background:#fdf6ee; position:relative; }
+.upload-drop-zone:hover,.upload-drop-zone.drag-over { background:#faebd7; border-color:#b07a5a; }
+.upload-drop-zone input[type="file"] { position:absolute; inset:0; opacity:0; cursor:pointer; width:100%; height:100%; }
+.upload-icon { font-size:2rem; margin-bottom:0.4rem; }
+.upload-hint { font-size:0.82rem; color:#9a7060; font-style:italic; line-height:1.6; }
+.upload-form-row { display:flex; gap:10px; margin-top:1rem; flex-wrap:wrap; }
+.upload-form-row .field { flex:1; min-width:140px; }
+.upload-photo-btn { width:100%; padding:10px; background:#b07a5a; color:#fffaf4; border:none; border-radius:10px; font-family:'Playfair Display',serif; font-size:0.9rem; font-style:italic; cursor:pointer; transition:background 0.2s; margin-top:1rem; }
+.upload-photo-btn:hover { background:#96644a; }
+.upload-photo-btn:disabled { background:#c4a98a; cursor:not-allowed; }
+.upload-preview-wrap { margin-top:0.75rem; display:flex; align-items:center; gap:0.75rem; }
+.upload-preview-img { width:60px; height:60px; object-fit:cover; border:3px solid #e8d5c0; border-radius:4px; display:none; }
+.upload-preview-name { font-size:0.78rem; color:#9a7060; font-style:italic; }
+.photo-success-msg { display:none; text-align:center; padding:0.75rem; font-style:italic; color:#7a5c47; font-size:0.88rem; }
+</style>
+</head>
+<body>
+
+<div class="rose-strip">
+  <svg viewBox="0 0 1400 210" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+    <rect width="1400" height="210" fill="#ddd0be"/>
+    <g opacity="0.6">
+      <g transform="translate(90,108)">
+        <ellipse cx="0" cy="-32" rx="34" ry="23" fill="#f0e6d8" transform="rotate(-18)"/>
+        <ellipse cx="22" cy="-12" rx="32" ry="22" fill="#e8d8c8" transform="rotate(28)"/>
+        <ellipse cx="-22" cy="-12" rx="32" ry="22" fill="#ecdcc8" transform="rotate(-28)"/>
+        <ellipse cx="0" cy="10" rx="30" ry="20" fill="#f0e2d0"/>
+        <ellipse cx="0" cy="-6" rx="19" ry="15" fill="#f5ede0"/>
+        <ellipse cx="0" cy="-10" rx="11" ry="9" fill="#faf2e8"/>
+        <rect x="-3" y="22" width="6" height="44" fill="#8a9e72" rx="3"/>
+        <ellipse cx="14" cy="42" rx="16" ry="9" fill="#7a9060" transform="rotate(18,14,42)"/>
+      </g>
+      <g transform="translate(270,92)">
+        <ellipse cx="0" cy="-29" rx="30" ry="21" fill="#f4ece0" transform="rotate(12)"/>
+        <ellipse cx="19" cy="-10" rx="28" ry="19" fill="#ede0cc" transform="rotate(38)"/>
+        <ellipse cx="-19" cy="-10" rx="28" ry="19" fill="#f0e4d0" transform="rotate(-38)"/>
+        <ellipse cx="0" cy="9" rx="26" ry="17" fill="#f4e8d8"/>
+        <ellipse cx="0" cy="-5" rx="16" ry="13" fill="#f8f0e4"/>
+        <rect x="-3" y="19" width="5" height="36" fill="#8a9e72" rx="3"/>
+        <ellipse cx="-11" cy="36" rx="13" ry="8" fill="#7a9060" transform="rotate(-22,-11,36)"/>
+      </g>
+      <g transform="translate(450,116)">
+        <ellipse cx="0" cy="-33" rx="35" ry="24" fill="#ece0d0" transform="rotate(-8)"/>
+        <ellipse cx="23" cy="-13" rx="33" ry="23" fill="#e8d8c4" transform="rotate(24)"/>
+        <ellipse cx="-23" cy="-13" rx="33" ry="23" fill="#eee2d2" transform="rotate(-24)"/>
+        <ellipse cx="0" cy="11" rx="31" ry="21" fill="#f2e8d8"/>
+        <ellipse cx="0" cy="-7" rx="20" ry="16" fill="#f6eee2"/>
+        <ellipse cx="0" cy="-11" rx="12" ry="10" fill="#faf4e8"/>
+        <rect x="-3" y="23" width="6" height="46" fill="#8a9e72" rx="3"/>
+        <ellipse cx="15" cy="43" rx="16" ry="10" fill="#7a9060" transform="rotate(15,15,43)"/>
+      </g>
+      <g transform="translate(630,100)">
+        <ellipse cx="0" cy="-30" rx="31" ry="22" fill="#f0e6d8" transform="rotate(6)"/>
+        <ellipse cx="20" cy="-11" rx="29" ry="20" fill="#eadeca" transform="rotate(33)"/>
+        <ellipse cx="-20" cy="-11" rx="29" ry="20" fill="#eee2ce" transform="rotate(-33)"/>
+        <ellipse cx="0" cy="9" rx="27" ry="18" fill="#f2e8da"/>
+        <ellipse cx="0" cy="-5" rx="17" ry="14" fill="#f7efe3"/>
+        <rect x="-2" y="20" width="5" height="39" fill="#8a9e72" rx="3"/>
+        <ellipse cx="-11" cy="37" rx="14" ry="8" fill="#7a9060" transform="rotate(-18,-11,37)"/>
+      </g>
+      <g transform="translate(810,110)">
+        <ellipse cx="0" cy="-31" rx="33" ry="23" fill="#f4ece0" transform="rotate(-14)"/>
+        <ellipse cx="21" cy="-12" rx="31" ry="21" fill="#eee0cc" transform="rotate(26)"/>
+        <ellipse cx="-21" cy="-12" rx="31" ry="21" fill="#f2e4d0" transform="rotate(-26)"/>
+        <ellipse cx="0" cy="10" rx="29" ry="19" fill="#f6ecdc"/>
+        <ellipse cx="0" cy="-6" rx="18" ry="14" fill="#faf2e6"/>
+        <ellipse cx="0" cy="-10" rx="11" ry="9" fill="#fdf8f0"/>
+        <rect x="-3" y="21" width="6" height="41" fill="#8a9e72" rx="3"/>
+        <ellipse cx="14" cy="40" rx="15" ry="9" fill="#7a9060" transform="rotate(17,14,40)"/>
+      </g>
+      <g transform="translate(990,97)">
+        <ellipse cx="0" cy="-28" rx="29" ry="20" fill="#ece0d0" transform="rotate(10)"/>
+        <ellipse cx="18" cy="-9" rx="27" ry="19" fill="#e8dac8" transform="rotate(40)"/>
+        <ellipse cx="-18" cy="-9" rx="27" ry="19" fill="#ecdecc" transform="rotate(-40)"/>
+        <ellipse cx="0" cy="8" rx="25" ry="17" fill="#f0e6d6"/>
+        <ellipse cx="0" cy="-4" rx="15" ry="12" fill="#f6eee2"/>
+        <rect x="-2" y="17" width="5" height="35" fill="#8a9e72" rx="3"/>
+        <ellipse cx="-10" cy="33" rx="12" ry="7" fill="#7a9060" transform="rotate(-20,-10,33)"/>
+      </g>
+      <g transform="translate(1175,113)">
+        <ellipse cx="0" cy="-32" rx="34" ry="23" fill="#f0e8dc" transform="rotate(-5)"/>
+        <ellipse cx="22" cy="-12" rx="32" ry="22" fill="#eadfcc" transform="rotate(21)"/>
+        <ellipse cx="-22" cy="-12" rx="32" ry="22" fill="#eee3d2" transform="rotate(-21)"/>
+        <ellipse cx="0" cy="10" rx="30" ry="20" fill="#f4eada"/>
+        <ellipse cx="0" cy="-7" rx="19" ry="15" fill="#f8f0e4"/>
+        <ellipse cx="0" cy="-11" rx="11" ry="9" fill="#fdf8f0"/>
+        <rect x="-3" y="22" width="6" height="43" fill="#8a9e72" rx="3"/>
+        <ellipse cx="13" cy="42" rx="15" ry="9" fill="#7a9060" transform="rotate(16,13,42)"/>
+      </g>
+      <g transform="translate(1355,101)">
+        <ellipse cx="0" cy="-30" rx="32" ry="21" fill="#f2eadc" transform="rotate(-17)"/>
+        <ellipse cx="20" cy="-11" rx="30" ry="20" fill="#ecdfcc" transform="rotate(30)"/>
+        <ellipse cx="-20" cy="-11" rx="30" ry="20" fill="#f0e3d0" transform="rotate(-30)"/>
+        <ellipse cx="0" cy="9" rx="28" ry="18" fill="#f4eade"/>
+        <ellipse cx="0" cy="-5" rx="17" ry="13" fill="#f9f1e5"/>
+        <rect x="-3" y="19" width="6" height="40" fill="#8a9e72" rx="3"/>
+        <ellipse cx="12" cy="39" rx="14" ry="8" fill="#7a9060" transform="rotate(15,12,39)"/>
+      </g>
+    </g>
+    <rect width="1400" height="210" fill="#c8b49a" opacity="0.15"/>
+  </svg>
+  <div class="rose-fade"></div>
+</div>
+
+<div class="page">
+
+  <div class="header">
+    <div class="eyebrow">✦ a little collection, made with love ✦</div>
+    <h1>Songs That Remind Us of</h1>
+    <div class="sister-name">Karsyn Sophia Salvador</div>
+    <p>Every melody here came from someone whose life you've touched.<br>Press play and feel the love.</p>
+  </div>
+
+  <div class="sep">· · ·</div>
+
+  <div class="songs-list" id="songsList"></div>
+
+  <div class="add-section">
+    <div class="add-title">Add your song for Karsyn ♡</div>
+    <div class="add-subtitle">Have a song that reminds you of her? Share it here and it'll appear on the page for everyone to see.</div>
+    <div class="form-grid">
+      <div class="field">
+        <label>Your name</label>
+        <input type="text" id="inputName" placeholder="e.g. Tita Grace">
+      </div>
+      <div class="field">
+        <label>Your relationship to Karsyn</label>
+        <input type="text" id="inputRelation" placeholder="e.g. her cousin">
+      </div>
+      <div class="field">
+        <label>Song title</label>
+        <input type="text" id="inputSong" placeholder="e.g. Golden">
+      </div>
+      <div class="field">
+        <label>Artist</label>
+        <input type="text" id="inputArtist" placeholder="e.g. Harry Styles">
+      </div>
+      <div class="field full">
+        <label>Spotify link (optional — paste for playback)</label>
+        <input type="text" id="inputSpotify" placeholder="https://open.spotify.com/track/...">
+      </div>
+      <div class="field full">
+        <label>Your message to Karsyn</label>
+        <textarea id="inputMessage" rows="4" placeholder="Why does this song remind you of her? A memory, a feeling, anything..."></textarea>
+      </div>
+    </div>
+    <button class="submit-btn" id="submitSongBtn" onclick="addSong()">Add this song to Karsyn's playlist ♪</button>
+    <div class="success-msg" id="successMsg">✦ Your song has been added — thank you for loving Karsyn so well. ✦</div>
+  </div>
+
+  <div class="hosting-note">
+    💡 <strong>Tip:</strong> The Spotify embed plays audio when hosted online. When opened as a local file, use the green "Open in Spotify" button instead.
+  </div>
+
+
+  <div class="sep">· · ·</div>
+
+  <div class="corkboard-section">
+    <div class="corkboard-section-title">Karsyn's Memory Board 📌</div>
+    <div class="corkboard-section-subtitle">Pin a photo to her board — a little piece of you she can take with her to college.</div>
+    <div class="corkboard" id="corkboard">
+      <div class="corkboard-photos" id="corkboardPhotos">
+        <div class="corkboard-empty">No photos yet — be the first to pin one! 📎</div>
+      </div>
+    </div>
+    <div class="upload-area">
+      <div class="field" style="margin-bottom:0.5rem;"><label>Upload a photo for the board</label></div>
+      <div class="upload-drop-zone" id="dropZone">
+        <input type="file" id="photoFileInput" accept="image/*">
+        <div class="upload-icon">🖼️</div>
+        <div class="upload-hint">Click or drag &amp; drop a photo here<br><span style="font-size:0.74rem;opacity:0.7;">JPG, PNG, GIF</span></div>
+      </div>
+      <div class="upload-preview-wrap" id="previewWrap">
+        <img id="previewImg" class="upload-preview-img" src="" alt="preview">
+        <span class="upload-preview-name" id="previewName"></span>
+      </div>
+      <div class="upload-form-row">
+        <div class="field"><label>Your name</label><input type="text" id="photoName" placeholder="e.g. Tita Grace"></div>
+        <div class="field"><label>Caption (optional)</label><input type="text" id="photoCaption" placeholder="e.g. best summer ever"></div>
+      </div>
+      <button class="upload-photo-btn" id="uploadPhotoBtn" onclick="addPhoto()" disabled>Pin it to Karsyn's board 📌</button>
+      <div class="photo-success-msg" id="photoSuccessMsg">✦ Your photo has been pinned — she'll love it. ✦</div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>"You are the song we didn't know we needed."</p>
+    <span class="signed">— with all our love ♡</span>
+  </div>
+
+</div>
+
+
+<script>
+const STORAGE_KEY = 'karsyn_songs_v3';
+
+/* ── JSONBIN CONFIG ── */
+const BIN_ID  = '6a1041016877513b27b48926';
+const BIN_KEY = '$2a$10$iqslSLPh86J8z4umgAYoL.jBwYkvUQ6FG5nQRihVFjbOXT5ValnzO';
+const BIN_URL = 'https://api.jsonbin.io/v3/b/' + BIN_ID;
+
+let binCache = null;
+
+async function loadBin() {
+  if (binCache) return binCache;
+  try {
+    const res = await fetch(BIN_URL + '/latest', { headers: { 'X-Master-Key': BIN_KEY } });
+    const data = await res.json();
+    binCache = data.record || { songs: [], photos: [] };
+    return binCache;
+  } catch(e) { return { songs: [], photos: [] }; }
+}
+
+async function saveBin(record) {
+  binCache = record;
+  try {
+    await fetch(BIN_URL, {
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json', 'X-Master-Key': BIN_KEY },
+      body: JSON.stringify(record)
+    });
+  } catch(e) {}
+}
+
+const defaultSongs = [
+  {
+    id: 'default_1',
+    title: 'Little Things',
+    artist: 'One Direction',
+    from: 'Kadence Salvador',
+    relation: 'her sister',
+    spotifyId: '0TAmnCzOtqRfvA38DDLTjj',
+    spotifyUrl: 'https://open.spotify.com/track/0TAmnCzOtqRfvA38DDLTjj',
+    message: "This song brings me back memories when we'd race on being the SLOWEST EATER, as if that makes sense, or when we'll always share everything or anything, no matter how crazy it sounds \u2014 all of this just shows that all the little things matter. Because knowing you're going to get into greater things, the little ones will always be there."
+  }
+];
+
+async function loadSongs() {
+  const record = await loadBin();
+  return [...defaultSongs, ...(record.songs || [])];
+}
+
+async function saveSong(newSong) {
+  const record = await loadBin();
+  record.songs = record.songs || [];
+  record.songs.push(newSong);
+  await saveBin(record);
+}
+
+async function loadPhotos() {
+  const record = await loadBin();
+  return record.photos || [];
+}
+
+async function savePhotos(photos) {
+  const record = await loadBin();
+  record.photos = photos;
+  await saveBin(record);
+}
+
+function extractSpotifyId(url) {
+  const match = url.match(/track\/([a-zA-Z0-9]+)/);
+  return match ? match[1] : null;
+}
+
+const spotifySVG = `<svg viewBox="0 0 24 24" width="11" height="11" fill="#fff"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>`;
+const playIconSVG  = `<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>`;
+const pauseIconSVG = `<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>`;
+
+const playingStates = {};
+
+function togglePlay(id) {
+  const record    = document.getElementById('record-' + id);
+  const tonearm   = document.getElementById('arm-' + id);
+  const playBtn   = document.getElementById('playbtn-' + id);
+  const embedWrap = document.getElementById('embed-' + id);
+  const isPlaying = playingStates[id];
+
+  if (isPlaying) {
+    playingStates[id] = false;
+    record.classList.remove('spinning');
+    tonearm.classList.remove('playing');
+    tonearm.classList.add('resting');
+    playBtn.innerHTML = playIconSVG;
+    embedWrap.classList.remove('open');
+  } else {
+    playingStates[id] = true;
+    record.classList.add('spinning');
+    tonearm.classList.remove('resting');
+    tonearm.classList.add('playing');
+    playBtn.innerHTML = pauseIconSVG;
+    if (!embedWrap.dataset.loaded && embedWrap.dataset.spotifyId) {
+      embedWrap.innerHTML = '<iframe src="https://open.spotify.com/embed/track/' + embedWrap.dataset.spotifyId + '?utm_source=generator&theme=0" width="100%" height="80" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>';
+      embedWrap.dataset.loaded = '1';
+    }
+    embedWrap.classList.add('open');
+  }
+}
+
+async function renderSongs() {
+  const list = document.getElementById('songsList');
+  list.innerHTML = '<div style="text-align:center;padding:2rem;font-style:italic;color:#9a7060;font-size:0.88rem;">Loading songs...</div>';
+  const songs = await loadSongs();
+  list.innerHTML = '';
+
+  songs.forEach((s, i) => {
+    const card = document.createElement('div');
+    card.className = 'song-card';
+    card.style.animationDelay = (i * 0.1) + 's';
+
+    const fromLine = s.from + (s.relation ? ' \u00b7 ' + s.relation : '');
+    const msgFrom  = s.from + (s.relation ? ', ' + s.relation : '');
+
+    const spotifyBtn = s.spotifyUrl
+      ? '<a class="spotify-open-btn" href="' + s.spotifyUrl + '" target="_blank">' + spotifySVG + ' Open in Spotify</a>'
+      : '';
+
+    playingStates[s.id] = false;
+
+    card.innerHTML =
+      '<div class="player-stage">' +
+        '<div class="turntable">' +
+          '<div class="platter"></div>' +
+          '<div class="record" id="record-' + s.id + '">' +
+            '<div class="record-label"><div class="record-label-text">' + s.title + '</div></div>' +
+            '<div class="spindle"></div>' +
+          '</div>' +
+        '</div>' +
+        '<div class="tonearm-wrap resting" id="arm-' + s.id + '">' +
+          '<div class="arm-pivot"></div><div class="arm-shaft"></div><div class="arm-head"></div>' +
+        '</div>' +
+        '<div class="controls-bar">' +
+          '<button class="play-vinyl-btn" id="playbtn-' + s.id + '" onclick="togglePlay(\'' + s.id + '\')" aria-label="Play">' + playIconSVG + '</button>' +
+          '<div class="song-info-stage"><div class="stage-title">' + s.title + '</div><div class="stage-artist">' + s.artist + '</div></div>' +
+          spotifyBtn +
+        '</div>' +
+      '</div>' +
+      '<div class="embed-reveal" id="embed-' + s.id + '"' + (s.spotifyId ? ' data-spotify-id="' + s.spotifyId + '"' : '') + '></div>' +
+      '<div class="card-bottom">' +
+        '<div style="display:flex;align-items:center;gap:8px;margin-bottom:0.85rem;flex-wrap:wrap;">' +
+          '<span class="card-from-badge">From ' + fromLine + '</span>' +
+        '</div>' +
+        '<div class="card-message">\u201c' + s.message + '\u201d<span class="msg-from">\u2014 ' + msgFrom + '</span></div>' +
+      '</div>';
+
+    list.appendChild(card);
+  });
+}
+
+async function addSong() {
+  const name      = document.getElementById('inputName').value.trim();
+  const relation  = document.getElementById('inputRelation').value.trim();
+  const song      = document.getElementById('inputSong').value.trim();
+  const artist    = document.getElementById('inputArtist').value.trim();
+  const spotifyRaw= document.getElementById('inputSpotify').value.trim();
+  const message   = document.getElementById('inputMessage').value.trim();
+
+  if (!name || !song || !artist || !message) {
+    alert('Please fill in your name, the song title, artist, and your message \u2665');
+    return;
+  }
+
+  const btn = document.getElementById('submitSongBtn');
+  btn.disabled = true;
+  btn.textContent = 'Adding...';
+
+  const spotifyId  = spotifyRaw ? extractSpotifyId(spotifyRaw) : null;
+  const spotifyUrl = spotifyRaw || null;
+
+  const newSong = { id: 'song_' + Date.now(), title: song, artist, from: name, relation, spotifyId, spotifyUrl, message };
+  await saveSong(newSong);
+  binCache = null;
+
+  btn.disabled = false;
+  btn.textContent = "Add this song to Karsyn's playlist \u266a";
+
+  ['inputName','inputRelation','inputSong','inputArtist','inputSpotify','inputMessage']
+    .forEach(id => { document.getElementById(id).value = ''; });
+
+  const msg = document.getElementById('successMsg');
+  msg.style.display = 'block';
+  setTimeout(() => { msg.style.display = 'none'; }, 4000);
+
+  renderSongs();
+  window.scrollTo({ top: document.getElementById('songsList').offsetTop - 20, behavior: 'smooth' });
+}
+
+/* ── CORK BOARD ── */
+const PIN_COLORS = ['#e74c3c','#e67e22','#f1c40f','#2ecc71','#3498db','#9b59b6','#e91e63','#00bcd4'];
+const TILTS = [-6,-4,-3,-2,2,3,5,6,-5,4];
+let pendingPhotoData = null;
+
+async function renderBoard() {
+  document.getElementById('corkboardPhotos').innerHTML = '<div class="corkboard-empty">Loading photos...</div>';
+  await loadBin();
+  renderBoardFromCache();
+}
+
+const fileInput  = document.getElementById('photoFileInput');
+const uploadBtn  = document.getElementById('uploadPhotoBtn');
+const previewImg = document.getElementById('previewImg');
+const previewName = document.getElementById('previewName');
+
+fileInput.addEventListener('change', function() {
+  const file = this.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = function(e) {
+    // Compress to thumbnail so image fits in JSONBin's 512KB limit
+    const img = new Image();
+    img.onload = function() {
+      const MAX = 200;
+      let w = img.width, h = img.height;
+      if (w > h) { if (w > MAX) { h = Math.round(h * MAX / w); w = MAX; } }
+      else        { if (h > MAX) { w = Math.round(w * MAX / h); h = MAX; } }
+      const canvas = document.createElement('canvas');
+      canvas.width = w; canvas.height = h;
+      canvas.getContext('2d').drawImage(img, 0, 0, w, h);
+      pendingPhotoData = canvas.toDataURL('image/jpeg', 0.75);
+      previewImg.src = pendingPhotoData;
+      previewImg.style.display = 'block';
+      previewName.textContent = file.name;
+      uploadBtn.disabled = false;
+    };
+    img.src = e.target.result;
+  };
+  reader.readAsDataURL(file);
+});
+
+const dropZone = document.getElementById('dropZone');
+dropZone.addEventListener('dragover', function(e) { e.preventDefault(); dropZone.classList.add('drag-over'); });
+dropZone.addEventListener('dragleave', function() { dropZone.classList.remove('drag-over'); });
+dropZone.addEventListener('drop', function(e) {
+  e.preventDefault(); dropZone.classList.remove('drag-over');
+  const file = e.dataTransfer.files[0];
+  if (file && file.type.startsWith('image/')) {
+    const dt = new DataTransfer(); dt.items.add(file);
+    fileInput.files = dt.files;
+    fileInput.dispatchEvent(new Event('change'));
+  }
+});
+
+async function addPhoto() {
+  if (!pendingPhotoData) return;
+  const from    = document.getElementById('photoName').value.trim();
+  const caption = document.getElementById('photoCaption').value.trim();
+
+  const newPhoto = { id: 'photo_' + Date.now(), data: pendingPhotoData, from, caption };
+
+  // 1. Show it on the board INSTANTLY from memory — don't wait for network
+  if (!binCache) binCache = { songs: [], photos: [] };
+  if (!binCache.photos) binCache.photos = [];
+  binCache.photos.push(newPhoto);
+  renderBoardFromCache();
+
+  // 2. Reset form right away
+  uploadBtn.disabled = true;
+  uploadBtn.textContent = 'Saving...';
+  pendingPhotoData = null;
+  fileInput.value = '';
+  previewImg.style.display = 'none';
+  previewImg.src = '';
+  previewName.textContent = '';
+  document.getElementById('photoName').value = '';
+  document.getElementById('photoCaption').value = '';
+
+  const msg = document.getElementById('photoSuccessMsg');
+  msg.style.display = 'block';
+  setTimeout(function() { msg.style.display = 'none'; }, 3500);
+
+  document.getElementById('corkboard').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+  // 3. Save to cloud in background
+  try {
+    await saveBin(binCache);
+  } catch(e) {}
+
+  uploadBtn.disabled = false;
+  uploadBtn.textContent = "Pin it to Karsyn's board \uD83D\uDCCC";
+}
+
+function renderBoardFromCache() {
+  const photos = (binCache && binCache.photos) ? binCache.photos : [];
+  const container = document.getElementById('corkboardPhotos');
+  container.innerHTML = '';
+
+  if (photos.length === 0) {
+    container.innerHTML = '<div class="corkboard-empty">No photos yet — be the first to pin one! \uD83D\uDCCE</div>';
+    return;
+  }
+
+  photos.forEach(function(p, i) {
+    const tilt = TILTS[i % TILTS.length];
+    const pinColor = PIN_COLORS[i % PIN_COLORS.length];
+    const wrap = document.createElement('div');
+    wrap.className = 'pinned-photo';
+    wrap.style.setProperty('--tilt', tilt + 'deg');
+    wrap.style.transform = 'rotate(' + tilt + 'deg)';
+    wrap.style.animationDelay = (i * 0.08) + 's';
+    wrap.innerHTML =
+      '<div class="pin">' +
+        '<div class="pin-head" style="background:radial-gradient(circle at 35% 35%,' + pinColor + 'dd,' + pinColor + '88)"></div>' +
+        '<div class="pin-needle"></div>' +
+      '</div>' +
+      '<div class="photo-frame">' +
+        '<img src="' + p.data + '" alt="memory">' +
+        '<div class="photo-caption">' + (p.caption || p.from || '') + '</div>' +
+      '</div>';
+    container.appendChild(wrap);
+  });
+}
+
+renderSongs();
+renderBoard();
+</script>
+
+</body>
+</html>
